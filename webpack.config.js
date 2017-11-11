@@ -25,7 +25,7 @@ module.exports = {
 				}
 			},
 			{
-				test: 	 /\.(png|jpg)$/,
+				test: 	 /\.(png|jpg|ttf|eot|woff|woff2|svg|gif)$/,
 				loader: 'url-loader?limit=20000'
 			},
 			{
@@ -35,5 +35,5 @@ module.exports = {
 			}
 		]
 	}
-	
+
 };
