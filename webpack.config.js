@@ -1,16 +1,18 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
 	entry: __dirname + '/src/js/app.js',
 	output: {
-		path: 	  'build',
+		path: 	  path.join(__dirname, 'build'),
+		publicPath: '/build/',
 		filename: 'bundle.js'
 	},
 	devServer: {
 		inline:      true,
-		contentBase: './build',
+		contentBase: './',
 		port: 		 3000
-	}
+	},
 	module: {
 		loaders: [
 			{
@@ -32,5 +34,5 @@ module.exports = {
 				loader:  'style-loader!css-loader!sass-loader'
 			}
 		]
-	},
+	}
 };
